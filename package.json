@@ -1,0 +1,16 @@
+{
+  "name": "starwars-api",
+  "version": "1.0.0",
+  "description": "starwars-api desenvolvido em nodejs e mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alairton Pereira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.4.5"
+  }
+}
