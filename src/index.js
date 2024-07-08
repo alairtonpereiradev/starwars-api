@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 
 const app = express()
 app.use(express.json())
-const port = 3000
-
+const PORT = 3333
+const HOST = '0.0.0.0'
 
 // construção do banco de dados(models)
 const Film = mongoose.model('Film',{
@@ -52,8 +52,8 @@ app.delete("/:id", async (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(PORT, HOST, () => {
     // connexão com mongodb
-mongoose.connect('mongodb+srv://<user>:<password>@starwars-api.0qjo6lv.mongodb.net/?retryWrites=true&w=majority&appName=starwars-api')
-    console.log("App running")
+mongoose.connect('mongodb+srv://alairtonpereiradev:8VK8xBqFgxXXoElI@starwars-api.0qjo6lv.mongodb.net/?retryWrites=true&w=majority&appName=starwars-api')
+    console.log(`Server running at http://${HOST}:${PORT}/`);
 })
